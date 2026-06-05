@@ -4,15 +4,15 @@ A FastAPI Web API that implements JWT (JSON Web Token) authentication with login
 
 ## Tech Stack
 
-| Component | Version |
-|-----------|---------|
-| Python | 3.11+ |
-| FastAPI | 0.111+ |
-| Uvicorn | 0.29+ |
-| python-jose | 3.3+ |
+| Component        | Version           |
+| ---------------- | ----------------- |
+| Python           | 3.11+             |
+| FastAPI          | 0.111+            |
+| Uvicorn          | 0.29+             |
+| python-jose      | 3.3+              |
 | passlib + bcrypt | 1.7.x + ≥3.2,<4.0 |
-| Pydantic | 2.x |
-| Poetry | 1.8+ |
+| Pydantic         | 2.x               |
+| Poetry           | 1.8+              |
 
 ## Project Structure
 
@@ -104,6 +104,7 @@ GET /health
 ```
 
 **Response**
+
 ```json
 { "status": "ok" }
 ```
@@ -194,11 +195,11 @@ curl -s -X POST http://localhost:8000/token/refresh \
 
 ## Token Details
 
-| Property | Value |
-|----------|-------|
-| Algorithm | HS256 |
-| Expiration | 300 seconds (5 minutes) |
-| Claim used for identity | `sub` (subject) |
+| Property                | Value                   |
+| ----------------------- | ----------------------- |
+| Algorithm               | HS256                   |
+| Expiration              | 300 seconds (5 minutes) |
+| Claim used for identity | `sub` (subject)         |
 
 The secret key defaults to a built-in value for local development. **Always set a strong `SECRET_KEY` environment variable in production.**
 
@@ -206,8 +207,8 @@ The secret key defaults to a built-in value for local development. **Always set 
 
 ## Default Credentials
 
-| Username | Password |
-|----------|----------|
-| `admin` | `admin123` |
+| Username | Password   |
+| -------- | ---------- |
+| `admin`  | `admin123` |
 
 > Passwords are hashed with bcrypt via passlib. The bcrypt dependency is pinned to `>=3.2,<4.0` for compatibility with passlib 1.7.x.
