@@ -18,9 +18,6 @@ dist/
 .env.local
 .env.production
 
-# Agent skills (installed locally, tracked via skills-lock.json)
-.agents/
-
 # OS
 .DS_Store
 *.swp
